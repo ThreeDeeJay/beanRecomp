@@ -71,7 +71,7 @@ jobs:
         cmake
         -A "${{matrix.Settings.Platform}}"
         -B "${{github.workspace}}/build"
-        --clean-first
+        --target clean
         -DCMAKE_BUILD_TYPE=${{matrix.Configuration}}
         -DCMAKE_PREFIX_PATH=C:\vcpkg\installed\${{matrix.Settings.Triplet}}
 #        -DSOMELIBRARY_INCLUDE_DIRS=C:\vcpkg\installed\${{matrix.Settings.Triplet}}\include\SOMELIBRARY
