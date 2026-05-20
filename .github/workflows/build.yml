@@ -62,7 +62,7 @@ jobs:
     - name: vcpkg
       if: steps.cache_vcpkg.outputs.cache-hit != 'true'
       run: |
-        vcpkg install ADD_SPACE_SEPARATED_VCPKG_PACKAGE_NAMES_HERE --triplet ${{matrix.Settings.Triplet}}
+        vcpkg install --triplet ${{matrix.Settings.Triplet}}
     - name: List vcpkg files
       run: Get-ChildItem -Path "C:\vcpkg" -File -Recurse | Select-Object FullName
 
