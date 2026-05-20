@@ -68,7 +68,7 @@ jobs:
 
     - name: Clean
       run: |
-        rmdir "${{github.workspace}}/build"
+        rmdir /S /Q "${{github.workspace}}/build"
 
     - name: Configure
       run: >
