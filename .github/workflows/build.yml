@@ -67,6 +67,7 @@ jobs:
       run: Get-ChildItem -Path "C:\vcpkg" -File -Recurse | Select-Object FullName
 
     - name: Clean
+      shell: cmd
       run: |
         rmdir /S /Q "${{github.workspace}}/build"
 
