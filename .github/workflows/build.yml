@@ -66,6 +66,10 @@ jobs:
     - name: List vcpkg files
       run: Get-ChildItem -Path "C:\vcpkg" -File -Recurse | Select-Object FullName
 
+    - name: Clean
+      run: |
+        rmdir "${{github.workspace}}/build"
+
     - name: Configure
       run: >
         cmake
